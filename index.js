@@ -2,7 +2,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import Parse from "parse/node";
 import { config } from "dotenv";
 config();
 
@@ -14,12 +13,6 @@ import paymentsRoute from "./routes/payments.js";
 import statisticsRoute from "./routes/statistics.js";
 
 const app = express();
-
-Parse.initialize(
-  "7tYDLLZDusCslkoZNEbmHBIm1iZfiZZSE1Gb4gGf",
-  "2Q1INA2AtwXjZujRv11koODBNASnVV3HBjEpi3eN"
-);
-Parse.serverURL = "https://parseapi.back4app.com/";
 
 // middlewares
 app.use(express.json());
